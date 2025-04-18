@@ -10,7 +10,6 @@ def cloudlet_store():
     data = request.json
     data["cloudlet_timestamp"] = time.time()
     
-    # Simulate processing delay
     time.sleep(0.05)
     
     resp = requests.post(CLOUD_URL, json=data)
